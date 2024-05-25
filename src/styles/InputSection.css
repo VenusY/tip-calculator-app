@@ -1,0 +1,72 @@
+.input-section {
+  margin-bottom: 2rem;
+}
+
+.input-section > * {
+  display: block;
+}
+
+.input-section > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.input-section__heading {
+  display: block;
+  color: var(--dark-grayish-cyan);
+}
+
+.tip-percentage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.tip-percentage__heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 14px;
+}
+
+.tip-percentage__button {
+  padding: 6px 15px;
+  background: var(--very-dark-cyan);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.tip-percentage__button:hover {
+  background: #9fe8df;
+  color: var(--very-dark-cyan);
+}
+
+.tip-percentage__input-field {
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  background: var(--very-light-grayish-cyan);
+  border: none;
+  border-radius: 5px;
+  font-family: "Space Mono", monospace;
+  font-size: 1.5rem;
+  text-align: right;
+  color: var(--very-dark-cyan);
+}
+
+.tip-percentage__input-field::placeholder {
+  color: var(--grayish-cyan);
+}
+
+@media screen and (min-width: 1000px) {
+  .input-section {
+    margin: 0 48px 0 0;
+  }
+
+  .tip-percentage {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 14px;
+  }
+}

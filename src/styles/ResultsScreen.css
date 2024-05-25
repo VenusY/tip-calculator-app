@@ -1,0 +1,31 @@
+.results-screen {
+  padding: 44px 24px 24px 24px;
+  background: var(--very-dark-cyan);
+  border-radius: 15px;
+}
+
+.results-screen__button {
+  width: 100%;
+  padding: 10px;
+  background: #26c2ad;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: var(--very-dark-cyan);
+  cursor: pointer;
+}
+
+.results-screen__button:hover {
+  background: #9fe8df;
+}
+
+@media screen and (min-width: 1000px) {
+  .results-screen {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 413px;
+    max-width: 413px;
+    padding: 60px 40px 40px 40px;
+  }
+}

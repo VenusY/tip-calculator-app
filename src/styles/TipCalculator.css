@@ -1,0 +1,20 @@
+.tip-calculator {
+  background: white;
+  width: 100%;
+  max-width: 650px;
+  min-height: calc(100vh - 144px);
+  padding: 32px;
+  border-radius: 20px 20px 0 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .tip-calculator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 920px;
+    max-width: unset;
+    min-height: unset;
+    border-radius: 20px;
+  }
+}

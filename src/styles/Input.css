@@ -1,0 +1,57 @@
+.input-section__heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 6px;
+}
+
+.input-section__error {
+  display: none;
+  width: 200px;
+  top: 0;
+  right: 0;
+  text-align: right;
+  color: #f23d3d;
+}
+
+.input-section__error--visible {
+  display: block;
+}
+
+.input-section__input-field-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input-section__input-field {
+  width: 100%;
+  padding: 10px 15px 10px 2.5rem;
+  background: var(--very-light-grayish-cyan);
+  border: none;
+  border-radius: 5px;
+  font-family: "Space Mono", monospace;
+  font-size: 1.25rem;
+  text-align: right;
+  color: var(--very-dark-cyan);
+}
+
+.input-section__input-field--valid,
+.input-section__input-field--valid:focus {
+  outline: 2px solid #5eb7a3;
+}
+
+.input-section__input-field--invalid,
+.input-section__input-field--invalid:focus {
+  outline: 2px solid #f23d3d;
+}
+
+.input-section__input-field::placeholder {
+  font-family: "Space Mono", monospace;
+  color: var(--grayish-cyan);
+}
+
+.input-section__icon {
+  position: absolute;
+  left: 15px;
+}
