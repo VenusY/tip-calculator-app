@@ -1,5 +1,7 @@
-import Input from "./Input.js";
-import "../styles/InputSection.css";
+import Input from './Input.js';
+import '../styles/InputSection.css';
+import dollarSign from '../images/icon-dollar.svg';
+import personIcon from '../images/icon-person.svg';
 
 export default function InputSection({
   bill,
@@ -29,71 +31,72 @@ export default function InputSection({
   }
 
   return (
-    <form className="input-section">
+    <form className='input-section'>
       <Input
-        heading={"Bill"}
-        image={"/images/icon-dollar.svg"}
+        heading='Bill'
+        image={dollarSign}
         value={bill}
         onEvent={changeBill}
         invalid={invalidBill}
         isZero={billIsZero}
+        htmlId='tip-input-field'
       />
 
       <div>
-        <div className="tip-percentage__heading-container">
+        <div className='tip-percentage__heading-container'>
           <label
-            className="input-section__heading tip-percentage__heading"
-            htmlFor="tip-input"
+            className='input-section__heading tip-percentage__heading'
+            htmlFor='tip-input'
           >
             Select Tip %
           </label>
           <p
             className={`input-section__error ${
               tipPercentage && invalidTipPercentage
-                ? "input-section__error--visible"
-                : ""
+                ? 'input-section__error--visible'
+                : ''
             }`}
           >
             Can't contain letters or symbols
           </p>
         </div>
 
-        <div className="tip-percentage">
+        <div className='tip-percentage'>
           <button
-            className="tip-percentage__button"
-            type="button"
+            className='tip-percentage__button'
+            type='button'
             data-percentage={0.05}
             onClick={changeTipPercentage}
           >
             5%
           </button>
           <button
-            className="tip-percentage__button"
-            type="button"
+            className='tip-percentage__button'
+            type='button'
             data-percentage={0.1}
             onClick={changeTipPercentage}
           >
             10%
           </button>
           <button
-            className="tip-percentage__button"
-            type="button"
+            className='tip-percentage__button'
+            type='button'
             data-percentage={0.15}
             onClick={changeTipPercentage}
           >
             15%
           </button>
           <button
-            className="tip-percentage__button"
-            type="button"
+            className='tip-percentage__button'
+            type='button'
             data-percentage={0.25}
             onClick={changeTipPercentage}
           >
             25%
           </button>
           <button
-            className="tip-percentage__button"
-            type="button"
+            className='tip-percentage__button'
+            type='button'
             data-percentage={0.5}
             onClick={changeTipPercentage}
           >
@@ -103,27 +106,28 @@ export default function InputSection({
             className={`tip-percentage__input-field ${
               tipPercentage
                 ? invalidTipPercentage
-                  ? "input-section__input-field--invalid"
-                  : "input-section__input-field--valid"
-                : ""
+                  ? 'input-section__input-field--invalid'
+                  : 'input-section__input-field--valid'
+                : ''
             }`}
-            id="tip-input"
-            type="text"
-            pattern="\d"
-            placeholder="Custom"
-            value={tipPercentage === 0 ? "" : tipPercentage}
+            id='tip-input'
+            type='text'
+            pattern='\d'
+            placeholder='Custom'
+            value={tipPercentage === 0 ? '' : tipPercentage}
             onChange={changeTipPercentage}
           />
         </div>
       </div>
 
       <Input
-        heading={"Number of People"}
-        image={"/images/icon-person.svg"}
+        heading='Number of People'
+        image={personIcon}
         value={numberOfPeople}
         onEvent={changeNumberOfPeople}
         invalid={invalidNumberOfPeople}
         isZero={numberOfPeopleIsZero}
+        htmlId='people-input-field'
       />
     </form>
   );
