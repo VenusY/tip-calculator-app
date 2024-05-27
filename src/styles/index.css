@@ -11,7 +11,7 @@ input {
 }
 
 body {
-  font-family: "Space Mono", monospace;
+  font-family: 'Space Mono', monospace;
   background: var(--light-grayish-cyan);
 }
 
@@ -28,10 +28,10 @@ body {
 @media screen and (min-width: 1000px) {
   #root {
     min-height: 100vh;
-    padding: 80px 0;
+    padding-block: 160px 100px;
   }
 
   .logo {
-    margin-block: 0 88px;
+    margin-block: 0 90px;
   }
 }
